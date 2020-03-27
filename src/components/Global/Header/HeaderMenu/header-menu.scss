@@ -1,0 +1,15 @@
+.header-menu {
+  .menu-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 28px;
+    color: $grey;
+    font-size: 16px;
+    line-height: 16px;
+    transition: all .3s ease;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

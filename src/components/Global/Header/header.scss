@@ -1,8 +1,83 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
 
   &-wrap {
     background: #090C13;
+  }
+}
+
+.logo {
+  text-align: center;
+
+  &-icon {
+    width: 32px;
+    height: 20px;
+    margin-bottom: 5px;
+  }
+
+  &-text {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    font-family: 'Vollkorn';
+  }
+}
+
+.user-data {
+  .user-item {
+    display: inline-block;
+    margin-left: 28px;
+    font-size: 16px;
+    line-height: 16px;
+    color: $grey;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.purse-item {
+      .current-balance {}
+
+      .current-currency {}
+    }
+
+    &.user-account {
+      position: relative;
+      padding-right: 17px;
+
+      .user-name {
+        display: inline-block;
+        max-width: 80px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        height: 6px;
+        margin-top: -3px;
+        content: '';
+        background-image: url('../../../assets/svg/icons/carret-gray.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &:hover {
+        &:after {
+          background-image: url('../../../assets/svg/icons/carret-white.svg');
+        }
+      }
+    }
   }
 }

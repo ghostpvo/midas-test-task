@@ -1,5 +1,5 @@
 <template>
-  <a :href="to">{{name}}</a>
+  <a :href="to" class="menu-item">{{name}}</a>
 </template>
 
 <script>

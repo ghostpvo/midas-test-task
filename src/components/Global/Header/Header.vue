@@ -1,9 +1,10 @@
 <template>
-  <div class="header-wrap">
+  <div class="header-wrap b-wrap">
     <header class="header">
       <header-menu-list :items="platformMenu"/>
       <a href="" class="logo">
-        <img src="../../../assets/svg/logo.svg" alt="">
+        <img src="../../../assets/svg/logo.svg" alt="" class="logo-icon">
+        <span class="logo-text">Midas.Investments</span>
       </a>
       <ul class="user-data">
         <li class="user-item purse-item">
@@ -18,7 +19,7 @@
           <span class="user-name">
             {{ user.name }}
           </span>
-          <div class="account-data">
+          <div v-if="false" class="account-data">
             <strong class="dropdown-title">
               {{ user.name }}
             </strong>
