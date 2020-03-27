@@ -1,0 +1,93 @@
+.button-main {
+  width: 226px;
+  height: 64px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 58px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .15);
+
+  &:hover {
+    box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+    transition: all .3s ease-in;
+  }
+
+  &:active {
+    opacity: .75;
+    transition: all .1s ease-in;
+  }
+
+  &.bg-blue-light {
+    background-color: #005BE9;
+    border-color: #005BE9;
+  }
+
+  &.bg-blue {
+    background-color: #0049BA;
+    border-color: #0049BA;
+  }
+
+  &.bg-blue-dark {
+    background-color: #003484;
+    border-color: #003484;
+  }
+
+  &.bg-white-light {
+    color: #000;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+
+  &.bg-white {
+    color: #000;
+    background-color: #EBEDF1;
+    border-color: #EBEDF1;
+  }
+
+  &.bg-white-dark {
+    color: #000;
+    background-color: #CCCCD1;
+    border-color: #CCCCD1;
+  }
+
+  &.bg-red-light {
+    background-color: #E14726;
+    border-color: #E14726;
+  }
+
+  &.bg-red {
+    background-color: #E13126;
+    border-color: #E13126;
+  }
+
+  &.bg-grey {
+    background-color: #E4E4EA;
+    border-color: #E4E4EA;
+  }
+
+  &.bg-dark {
+    background-color: #1A1D24;
+    border-color: #1A1D24;
+  }
+
+  &.bg-black-blue {
+    color: #005BE9;
+    background-color: #090C13;
+    border-color: #005BE9;
+  }
+
+  &.bg-black-red {
+    color: #E14726;
+    background-color: #090C13;
+    border-color: #E14726;
+  }
+
+  &.white-borders {
+    color: #fff!important;
+    border-color: #fff!important;
+  }
+}

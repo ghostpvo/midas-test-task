@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <cards-list class="b-wrap" />
+    <Buttons />
   </div>
 </template>
 
@@ -9,10 +10,11 @@
 
 import Header from './components/Global/Header/Header'
 import CardsList from './components/Global/Cards/CardsList'
+import Buttons from './components/UiKit/Buttons/Buttons'
 
 export default {
   name: 'App',
-  components: { CardsList, Header }
+  components: { Buttons, CardsList, Header }
 }
 </script>
 
