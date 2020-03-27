@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <Header />
+    <cards-list />
   </div>
 </template>
 
 <script>
 
 import Header from './components/Global/Header/Header'
+import CardsList from './components/Global/Cards/CardsList'
 
 export default {
   name: 'App',
-  components: { Header }
+  components: { CardsList, Header }
 }
 </script>
 

@@ -2,12 +2,6 @@
 @import 'fonts.scss';
 @import 'modules.scss';
 
-.page-content {
-  padding-top: 76px;
-  padding-bottom: 65px;
-
-  @include r-min(901) {
-    padding-top: 99px;
-    padding-bottom: 0;
-  }
+body {
+  background: #090C13;
 }
