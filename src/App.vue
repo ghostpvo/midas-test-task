@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <cards-list />
+    <cards-list class="b-wrap" />
   </div>
 </template>
 

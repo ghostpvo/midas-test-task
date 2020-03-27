@@ -1,10 +1,13 @@
 <template>
-  <li>
+  <li class="card-item">
     <div class="title-wrap">
-      <icon
-        :icon="data.name"
-        :tittle="`icon ${data.name}`"
-      />
+      <div class="card-icon-wrap">
+        <img
+          class="card-icon"
+          :src="require(`../../../assets/svg/icons/${data.name}.svg`)"
+          :alt="data.name"
+        />
+      </div>
       <div class="name-wrap">
         <strong class="name-main">
           {{ data.name }}
@@ -18,7 +21,7 @@
           ROI
         </span>
         <span class="percent-amount">
-          {{ data.percent }}
+          {{ data.percent }}%
         </span>
       </div>
     </div>
@@ -54,11 +57,12 @@
           {{ data.isPositive ? '+' : '-' }}
         </span>
         <span>
-          {{ data.percentDynamic }}
+          {{ data.percentDynamic }}%
         </span>
-        <icon
-          :icon="data.isPositive ? 'arr-up' : 'arr-down'"
-          :title="'progress arrow'"
+        <img
+          class="progress-arrow"
+          alt="progress arrow"
+          :src="require(`../../../assets/svg/icons/${data.isPositive ? 'arr-up' : 'arr-down'}.svg`)"
         />
       </div>
     </div>
@@ -66,10 +70,8 @@
 </template>
 
 <script>
-import Icon from '../../Elements/Icon/Icon'
 export default {
   name: 'Card',
-  components: { Icon },
   props: {
     data: {
       type: Array
