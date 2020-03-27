@@ -1,5 +1,8 @@
 .header {
-  &-wrap {
+  display: flex;
+  justify-content: space-between;
 
+  &-wrap {
+    background: #090C13;
   }
 }
