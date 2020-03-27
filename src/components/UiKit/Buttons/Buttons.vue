@@ -73,12 +73,21 @@ export default {
 
 <style lang="scss" scoped>
   .buttons-demo {
-    width: 1100px;
+    max-width: 1100px;
     padding-bottom: 100px;
 
     .button-main {
       display: inline-block;
       margin: 50px 50px 0 0;
+    }
+
+    @include r-max(613) {
+      margin-top: 100px;
+      text-align: center;
+
+      .button-main {
+        margin: 0 25px 25px;
+      }
     }
   }
 </style>

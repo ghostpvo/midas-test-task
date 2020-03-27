@@ -3,11 +3,20 @@
   padding-bottom: 20px;
 
   .cards-list {
-    display: flex;
+    font-size: 0;
+
+    @include r-max(622) {
+      text-align: center;
+
+      .card-item {
+        margin: 0 15px 30px;
+      }
+    }
   }
 }
 
 .card-item {
+  display: inline-block;
   width: 250px;
   padding: 30px;
   margin: 0 30px 30px 0;

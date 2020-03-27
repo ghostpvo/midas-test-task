@@ -1,44 +1,56 @@
 <template>
   <div class="header-wrap b-wrap">
     <header class="header">
-      <header-menu-list :items="platformMenu"/>
-      <a href="" class="logo">
-        <img src="../../../assets/svg/logo.svg" alt="" class="logo-icon">
-        <span class="logo-text">Midas.Investments</span>
-      </a>
-      <ul class="user-data">
-        <li class="user-item purse-item">
-          <span class="current-balance">
-            {{ user.balance }}
-          </span>
-          <span class="current-currency">
-            {{ user.currency }}
-          </span>
-        </li>
-        <li class="user-item user-account">
-          <span class="user-name">
-            {{ user.name }}
-          </span>
-          <div v-if="false" class="account-data">
-            <strong class="dropdown-title">
+      <div class="mobile-ui">
+        <a href="/" class="logo">
+          <img src="../../../assets/svg/logo.svg" alt="" class="logo-icon">
+          <span class="logo-text">Midas</span>
+        </a>
+        <span
+          @click="mobMenu = !mobMenu"
+          :class="['menu-toggle',{'active': mobMenu}]"
+        >
+          menu
+        </span>
+      </div>
+      <div :class="['menu-global',{'show-it': mobMenu}]">
+        <div class="menu-logo-group">
+          <a href="/" class="logo">
+            <img src="../../../assets/svg/logo.svg" alt="" class="logo-icon">
+            <span class="logo-text">Midas<span class="additional">.Investments</span></span>
+          </a>
+          <header-menu-list :items="platformMenu" />
+        </div>
+        <ul class="user-data">
+          <li class="user-item purse-item">
+            <span class="current-balance">
+              {{ user.balance }}
+            </span>
+            <span class="current-currency">
+              {{ user.currency }}
+            </span>
+          </li>
+          <li class="user-item user-account">
+            <span class="user-name">
               {{ user.name }}
-            </strong>
-            <nav class="user-menu">
-              <a
-                v-for="(item, index) in userMenu"
-                :key="`menu-item-${index}`"
-                :href="item.to"
-                class="user-menu-link">
-                {{ item.name }}
-              </a>
-              <a href="" class="user-menu-link">Test link 2</a>
-              <a href="" class="user-menu-link">Test link 3</a>
-              <a href="" class="user-menu-link">Test link 4</a>
-              <a href="" class="user-menu-link">Test link 5</a>
-            </nav>
-          </div>
-        </li>
-      </ul>
+            </span>
+            <div class="account-data">
+              <strong class="dropdown-title">
+                {{ user.name }}
+              </strong>
+              <nav class="user-menu">
+                <a
+                  v-for="(item, index) in userMenu"
+                  :key="`menu-item-${index}`"
+                  :href="item.to"
+                  class="user-menu-link">
+                  {{ item.name }}
+                </a>
+              </nav>
+            </div>
+          </li>
+        </ul>
+      </div>
     </header>
   </div>
 </template>
@@ -50,6 +62,7 @@ export default {
   components: { HeaderMenuList },
   data () {
     return {
+      mobMenu: false,
       platformMenu: [
         {
           to: '/',
@@ -71,19 +84,7 @@ export default {
       userMenu: [
         {
           to: '/',
-          name: 'Platform'
-        },
-        {
-          to: '/',
           name: 'Profile'
-        },
-        {
-          to: '/',
-          name: 'BTC balance'
-        },
-        {
-          to: '/',
-          name: 'Fline trading  bot'
         },
         {
           to: '/',
